@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Gallery | Bouncer Indoor Sports (Pvt.) Ltd. - Delkanda, Nugegoda</title>
+
+    <meta name="description"
+        content="Explore genuine photos of Bouncer Indoor Sports in Delkanda, Nugegoda. High-definition images of our indoor cricket practice nets, bowling machines, and full softball court.">
+    <meta name="keywords"
+        content="cricket photos colombo, indoor cricket gallery, bouncer indoor sports photos, bowling machine facility photos">
+    <meta name="theme-color" content="#080b09">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Photo Gallery | Bouncer Indoor Sports (Pvt.) Ltd.">
+    <meta property="og:description"
+        content="Tour our indoor cricket facilities, practice nets, bowling machines and match arena in Delkanda, Nugegoda.">
+    <meta property="og:image" content="images/cover.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- Tailwind CSS v3 via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080b09',
+                            darker: '#050705',
+                            surface: '#121814',
+                            card: '#162019',
+                            cardHover: '#1c2820',
+                            border: '#233227',
+                            green: '#087438',
+                            greenLight: '#0ea453',
+                            emerald: '#10b981',
+                            accent: '#facc15',
+                            accentHover: '#fde047',
+                            muted: '#94a3b8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow-green': '0 0 30px -5px rgba(8, 116, 56, 0.45)',
+                        'glow-accent': '0 0 30px -5px rgba(250, 204, 21, 0.45)',
+                        'card-elevated': '0 12px 35px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Layer -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-sports-grid text-slate-200 antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- ================= ANNOUNCEMENT BAR ================= -->
+    <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-brand-darker via-brand-card to-brand-darker border-b border-white/5 py-2 px-4 text-xs font-semibold text-center text-slate-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-accent text-brand-dark">
+                Special Offer
+            </span>
+            <span>⚡ Monday Machine Madness — Save LKR 300/hr on bowling machines every Monday!</span>
+            <a href="special-offers.html" class="text-brand-accent hover:underline inline-flex items-center gap-1 font-bold">
+                View Offer <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ================= STICKY HEADER & NAVBAR ================= -->
+    <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/10 transition-all duration-300" id="top">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+            <!-- Brand Logo & Name -->
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-brand-green to-brand-accent glow-ring-green transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/logo.jpeg" alt="Bouncer Indoor Sports Logo"
+                        class="w-full h-full object-cover rounded-full bg-brand-dark">
+                </div>
+                <div>
+                    <span class="block font-display text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-brand-accent transition-colors">
+                        BOUNCER
+                    </span>
+                    <span class="block text-[11px] font-bold tracking-widest text-emerald-400 uppercase">
+                        Indoor Sports
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-6 xl:gap-7">
+                <a href="index.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Home</a>
+                <a href="about.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">About Us</a>
+                <a href="facilities.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Facilities & Rates</a>
+                <a href="special-offers.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Special Offers</a>
+                <a href="youth-team.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Youth Team</a>
+                <a href="gallery.html" class="desktop-nav-link text-sm font-bold text-brand-accent transition-colors duration-200">Gallery</a>
+                <a href="contact.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Contact Us</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+94769992391"
+                    class="motion-hover-btn inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/5 hover:bg-white/10 text-white border border-white/15 transition-all">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                    <span>076 999 2391</span>
+                </a>
+                <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20book%20a%20slot."
+                    target="_blank" rel="noopener noreferrer"
+                    class="motion-hover-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-black uppercase tracking-wider bg-brand-accent hover:bg-brand-accentHover text-brand-dark shadow-glow-accent transition-all">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Book Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" type="button" aria-label="Open mobile navigation menu"
+                class="lg:hidden w-11 h-11 rounded-lg glass-card flex items-center justify-center text-slate-200 hover:text-white hover:border-brand-accent/50 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+    <div id="mobile-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden transition-opacity"></div>
+    <div id="mobile-drawer"
+        class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-brand-surface border-l border-white/10 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full border border-brand-accent/40">
+                    <span class="font-display font-extrabold text-white text-base">BOUNCER SPORTS</span>
+                </div>
+                <button id="mobile-menu-close" type="button" aria-label="Close navigation"
+                    class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-1 py-6">
+                <a href="index.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Home</a>
+                <a href="about.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">About Us</a>
+                <a href="facilities.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Facilities & Rates</a>
+                <a href="special-offers.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Special Offers</a>
+                <a href="youth-team.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Youth Team</a>
+                <a href="gallery.html" class="mobile-nav-link px-4 py-3 rounded-lg text-brand-accent bg-white/5 font-bold text-base transition-colors">Gallery</a>
+                <a href="contact.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Contact Us</a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-white/10 flex flex-col gap-3">
+            <a href="tel:+94769992391"
+                class="w-full py-3 px-4 rounded-xl text-center text-sm font-bold bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-2">
+                <i class="fa-solid fa-phone text-emerald-400"></i> Call 076 999 2391
+            </a>
+            <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20book%20a%20slot."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full py-3 px-4 rounded-xl text-center text-sm font-black bg-brand-accent text-brand-dark flex items-center justify-center gap-2 shadow-glow-accent">
+                <i class="fa-brands fa-whatsapp text-base"></i> Book Now
+            </a>
+            <p class="text-[11px] text-center text-slate-500 pt-2">
+                125/A, Old Kesbewa Rd, Delkanda, Nugegoda
+            </p>
+        </div>
+    </div>
+
+
+    <main>
+
+        <!-- ================= PAGE BANNER ================= -->
+        <section class="py-16 lg:py-24 relative overflow-hidden bg-brand-surface/70 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+                <span class="inline-block text-xs font-black tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20 mb-4"
+                    data-aos="fade-down">
+                    INSIDE BOUNCER INDOOR SPORTS
+                </span>
+
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight mb-4"
+                    data-aos="fade-up">
+                    Cricket Photo Gallery
+                </h1>
+
+                <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-6"
+                    data-aos="fade-up" data-aos-delay="100">
+                    Explore our indoor cricket facilities, training lanes, bowling machines, and match arena in Delkanda, Nugegoda. Click any image to view in high definition.
+                </p>
+
+                <!-- Breadcrumbs -->
+                <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-400" data-aos="fade-up" data-aos-delay="150">
+                    <a href="index.html" class="hover:text-brand-accent transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-brand-accent">Gallery</span>
+                </nav>
+
+            </div>
+        </section>
+
+
+        <!-- ================= GALLERY GRID ================= -->
+        <section class="py-20 lg:py-28 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Gallery Filter Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-2.5 mb-12" data-aos="fade-up">
+                    <button type="button" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 bg-brand-green text-white shadow-glow-green" data-gallery-filter="all">
+                        <i class="fa-solid fa-shapes mr-1.5"></i> All Media (9)
+                    </button>
+                    <button type="button" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent/50 hover:text-white" data-gallery-filter="photo">
+                        <i class="fa-solid fa-image mr-1.5 text-emerald-400"></i> Photos (8)
+                    </button>
+                    <button type="button" class="gallery-filter-btn px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 bg-brand-surface text-slate-300 border border-slate-800 hover:border-brand-accent/50 hover:text-white" data-gallery-filter="video">
+                        <i class="fa-solid fa-play mr-1.5 text-brand-accent"></i> Training Reels (1)
+                    </button>
+                </div>
+
+                <!-- Gallery Grid (Photos + Reels) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16" id="gallery-grid">
+
+                    <!-- ITEM 1 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="50">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/cover.jpg" alt="Bouncer Indoor Sports indoor cricket facility" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Our Cricket Facility
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 2 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-64 overflow-hidden bg-brand-surface p-6 flex items-center justify-center">
+                            <img src="images/logo.jpeg" alt="Official Bouncer Indoor Sports logo" loading="lazy"
+                                class="max-h-full max-w-full object-contain rounded-full shadow-lg">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Bouncer Indoor Sports
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 3 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="150">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/indoor-net.jpg" alt="Indoor cricket practice nets" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Indoor Practice Nets
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 4 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/facility-rates.jpg" alt="Bouncer Indoor Sports 2026 facility rates" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                2026 Facility Rates
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 5 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="250">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/hardball-machine.jpg" alt="Hardball bowling machine practice" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Hardball Bowling Machine
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 6 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/softball-machine.jpg" alt="Softball bowling machine practice" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Softball Bowling Machine
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 7 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="350">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/full-court.jpg" alt="Indoor full court for softball cricket" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Indoor Full Court
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 8 -->
+                    <figure class="gallery-media-item gallery-card glass-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+                        data-media-type="photo" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/monday-machine-madness.jpg" alt="Monday Machine Madness bowling machine offer" loading="lazy"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40">
+                                <span class="w-11 h-11 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center text-sm font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand"></i>
+                                </span>
+                            </div>
+                            <figcaption class="absolute bottom-4 left-4 right-4 text-sm font-bold text-white group-hover:text-brand-accent transition-colors">
+                                Monday Machine Madness
+                            </figcaption>
+                        </div>
+                    </figure>
+
+                    <!-- ITEM 9: OFFICIAL FACEBOOK TRAINING REEL -->
+                    <a href="https://www.facebook.com/share/r/18edDChzFU/" target="_blank" rel="noopener noreferrer"
+                        class="gallery-media-item glass-card rounded-2xl overflow-hidden border-2 border-brand-accent/50 hover:border-brand-accent shadow-glow-accent group relative block"
+                        data-media-type="video" data-aos="fade-up" data-aos-delay="450"
+                        title="Watch Training Reel on Facebook">
+                        <div class="relative h-64 overflow-hidden bg-brand-dark">
+                            <img src="images/hardball-machine.jpg" alt="Bouncer Indoor Sports Video Reel Thumbnail" loading="lazy"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-75">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+                            
+                            <!-- Badges -->
+                            <div class="absolute top-3 left-3 z-10 flex items-center gap-1.5">
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-red-600 text-white shadow">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                    Facebook Reel
+                                </span>
+                            </div>
+
+                            <div class="absolute top-3 right-3 z-10">
+                                <span class="w-8 h-8 rounded-full bg-blue-600/90 text-white flex items-center justify-center text-xs shadow">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </span>
+                            </div>
+
+                            <!-- Play Button Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="relative w-14 h-14 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center shadow-glow-accent group-hover:scale-110 transition-transform">
+                                    <span class="absolute -inset-2 rounded-full border border-brand-accent/60 animate-ping"></span>
+                                    <i class="fa-solid fa-play text-lg ml-0.5"></i>
+                                </div>
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4 z-10">
+                                <span class="text-[10px] font-bold uppercase text-emerald-400 tracking-wider block mb-0.5">
+                                    ⚡ Practice in Action
+                                </span>
+                                <span class="text-sm font-black text-white group-hover:text-brand-accent transition-colors block">
+                                    Live Batting & Bowling Machine Drills
+                                </span>
+                                <span class="text-[11px] text-slate-300 flex items-center gap-1 mt-1">
+                                    <span>Watch Reel</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-brand-accent"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- ================= FEATURED VIDEO REELS ================= -->
+                <div class="mb-16 pt-8 border-t border-white/10" data-aos="fade-up">
+
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-accent/10 text-brand-accent border border-brand-accent/20 mb-3">
+                            <i class="fa-solid fa-play text-[10px]"></i> FEATURED TRAINING REEL
+                        </span>
+                        <h3 class="font-display text-3xl sm:text-4xl font-black uppercase text-white tracking-tight">
+                            Watch Practice in Action
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+                            Check out real batting drills, bowling machine pace, and match moments recorded live inside our Delkanda indoor facility.
+                        </p>
+                    </div>
+
+                    <!-- Video Reel Card -->
+                    <div class="max-w-4xl mx-auto glass-card rounded-3xl overflow-hidden border border-brand-accent/30 shadow-glow-accent hover:border-brand-accent/60 transition-all">
+                        <div class="grid grid-cols-1 md:grid-cols-12 items-center">
+
+                            <!-- Video Visual with Play Button -->
+                            <div class="md:col-span-6 relative h-64 sm:h-80 overflow-hidden bg-brand-dark group">
+                                <img src="images/hardball-machine.jpg" alt="Bouncer Indoor Sports Video Reel Thumbnail"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-85">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+                                
+                                <!-- Play Button overlay -->
+                                <a href="https://www.facebook.com/share/r/18edDChzFU/" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Play video reel on Facebook"
+                                    class="absolute inset-0 flex items-center justify-center">
+                                    <div class="relative w-20 h-20 rounded-full bg-brand-accent/90 hover:bg-brand-accent text-brand-dark flex items-center justify-center shadow-glow-accent transition-transform hover:scale-110">
+                                        <span class="absolute -inset-2 rounded-full border border-brand-accent/60 animate-ping"></span>
+                                        <i class="fa-solid fa-play text-2xl ml-1"></i>
+                                    </div>
+                                </a>
+
+                                <div class="absolute top-4 left-4">
+                                    <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-red-600 text-white flex items-center gap-1.5 shadow">
+                                        <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                                        Facebook Reel
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Video Content & Actions -->
+                            <div class="md:col-span-6 p-6 sm:p-8 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold uppercase text-emerald-400 tracking-wider block mb-2">
+                                        ⚡ Intense Machine Practice
+                                    </span>
+                                    <h4 class="font-display font-extrabold text-2xl text-white mb-3">
+                                        Live Batting Drills & Bowling Machine Action
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                                        Watch our players sharpen their timing, tackle rapid pace deliveries, and refine footwork inside the Delkanda arena. Click below to view the official video reel on Facebook.
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row items-center gap-3">
+                                    <a href="https://www.facebook.com/share/r/18edDChzFU/"
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="motion-hover-btn w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-display font-black text-xs uppercase tracking-wider bg-brand-accent hover:bg-brand-accentHover text-brand-dark shadow-glow-accent transition-all">
+                                        <i class="fa-brands fa-facebook text-base"></i>
+                                        <span>Watch Reel on Facebook</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                                    </a>
+
+                                    <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20saw%20your%20practice%20reel%20and%20would%20like%20to%20book%20a%20session."
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="motion-hover-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-display font-bold text-xs uppercase tracking-wider bg-white/10 hover:bg-white/15 text-white border border-white/15 transition-all">
+                                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                                        <span>Book This Drill</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Facebook Showcase Box -->
+                <div class="glass-panel p-8 rounded-3xl border border-white/10 text-center max-w-2xl mx-auto" data-aos="fade-up">
+                    <h3 class="font-display font-extrabold text-xl text-white mb-2">
+                        Looking For More Cricket Action?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mb-6">
+                        Discover more photos, match clips, training videos, and community updates on our official Facebook page.
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=100063951169204" target="_blank" rel="noopener noreferrer"
+                        class="motion-hover-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-black text-xs uppercase tracking-wider bg-blue-600 hover:bg-blue-500 text-white shadow-lg transition-all">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>Visit Facebook Page</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-darker border-t border-white/10 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+
+                <!-- Col 1: Brand & Description -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.jpeg" alt="Bouncer Indoor Sports logo" loading="lazy"
+                            class="w-10 h-10 rounded-full border border-brand-accent/40">
+                        <div>
+                            <span class="font-display font-black text-white text-base">Bouncer Indoor Sports</span>
+                            <span class="block text-[11px] text-slate-400">(Pvt.) Ltd.</span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Delkanda's premier indoor cricket practice and training facility. Offering indoor nets, automated bowling machines, full softball court, and youth cricket community.
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=100063951169204" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>Follow Us on Facebook</span>
+                    </a>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-accent transition-colors">About Us</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Facilities & Rates</a></li>
+                        <li><a href="special-offers.html" class="hover:text-brand-accent transition-colors">Special Offers</a></li>
+                        <li><a href="youth-team.html" class="hover:text-brand-accent transition-colors">Bouncer Youth Team</a></li>
+                        <li><a href="gallery.html" class="text-brand-accent font-semibold transition-colors">Cricket Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-accent transition-colors">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Facilities Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Our Facilities
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Indoor Practice Nets (LKR 1,400/hr)</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Hardball Bowling Machine</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Softball Bowling Machine</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Indoor Full Court Softball Cricket</a></li>
+                        <li><a href="special-offers.html" class="hover:text-brand-accent transition-colors">Monday Machine Madness (LKR 1,500/hr)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Contact Info
+                    </h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-brand-accent mt-0.5"></i>
+                            <span>125/A, Old Kesbewa Road, Delkanda, Nugegoda, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-emerald-400"></i>
+                            <a href="tel:+94769992391" class="hover:text-white transition-colors">076 999 2391</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <a href="https://wa.me/94769992391" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">076 999 2391</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-brand-accent"></i>
+                            <span>Open 7 Days: 8:00 AM – 11:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>
+                    &copy; <span id="year">2026</span> Bouncer Indoor Sports (Pvt.) Ltd. All rights reserved.
+                </p>
+                <a href="#top" class="hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= GALLERY LIGHTBOX MODAL ================= -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+        <div id="modal-backdrop-area" class="absolute inset-0"></div>
+
+        <div id="modal-image-container" class="relative z-10 max-w-4xl w-full bg-brand-surface border border-white/15 rounded-3xl overflow-hidden shadow-2xl">
+
+            <!-- Modal Header / Controls -->
+            <div class="p-4 bg-brand-card/90 border-b border-white/10 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <span id="modal-counter" class="text-xs font-bold px-2.5 py-1 rounded-full bg-brand-accent text-brand-dark">
+                        1 / 8
+                    </span>
+                    <h4 id="modal-title" class="font-display font-extrabold text-white text-base truncate">
+                        Gallery Image
+                    </h4>
+                </div>
+                <button id="modal-close" type="button" aria-label="Close image preview"
+                    class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Image View -->
+            <div class="relative max-h-[70vh] bg-black/60 flex items-center justify-center overflow-hidden">
+                <img id="modal-image" src="" alt="Gallery Preview"
+                    class="max-h-[70vh] max-w-full object-contain mx-auto">
+
+                <!-- Navigation Arrows -->
+                <button id="modal-prev" type="button" aria-label="Previous image"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-brand-accent hover:text-brand-dark text-white flex items-center justify-center transition-colors shadow-lg">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="modal-next" type="button" aria-label="Next image"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 hover:bg-brand-accent hover:text-brand-dark text-white flex items-center justify-center transition-colors shadow-lg">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Caption Footer -->
+            <div class="p-4 bg-brand-card/90 border-t border-white/10">
+                <p id="modal-desc" class="text-xs text-slate-300 leading-relaxed"></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= FLOATING QUICK ACTION BUTTONS ================= -->
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20slot."
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Book on WhatsApp"
+        class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-glow-green animate-float-wp transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" type="button" aria-label="Back to top"
+        class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full glass-card border border-white/20 text-slate-300 hover:text-brand-accent hover:border-brand-accent/60 flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 shadow-xl">
+        <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.umd.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

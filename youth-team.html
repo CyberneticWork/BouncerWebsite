@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bouncer Youth Team | Bouncer Indoor Sports (Pvt.) Ltd. - Nugegoda</title>
+
+    <meta name="description"
+        content="Join the Bouncer Youth Team at Bouncer Indoor Sports, Delkanda, Nugegoda. Open to cricket enthusiasts aged 17 and above. Structured net training and competitive cricket community.">
+    <meta name="keywords"
+        content="bouncer youth team, cricket youth academy nugegoda, cricket team delkanda, indoor cricket practice youth">
+    <meta name="theme-color" content="#080b09">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bouncer Youth Team | Bouncer Indoor Sports (Pvt.) Ltd.">
+    <meta property="og:description"
+        content="Take your cricket journey to the next level. Open to ages 17 and above at 129/A, Old Kesbewa Road, Nugegoda.">
+    <meta property="og:image" content="images/indoor-net.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- Tailwind CSS v3 via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080b09',
+                            darker: '#050705',
+                            surface: '#121814',
+                            card: '#162019',
+                            cardHover: '#1c2820',
+                            border: '#233227',
+                            green: '#087438',
+                            greenLight: '#0ea453',
+                            emerald: '#10b981',
+                            accent: '#facc15',
+                            accentHover: '#fde047',
+                            muted: '#94a3b8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow-green': '0 0 30px -5px rgba(8, 116, 56, 0.45)',
+                        'glow-accent': '0 0 30px -5px rgba(250, 204, 21, 0.45)',
+                        'card-elevated': '0 12px 35px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 255, 255, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Layer -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-sports-grid text-slate-200 antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- ================= ANNOUNCEMENT BAR ================= -->
+    <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-brand-darker via-brand-card to-brand-darker border-b border-white/5 py-2 px-4 text-xs font-semibold text-center text-slate-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-accent text-brand-dark">
+                Special Offer
+            </span>
+            <span>⚡ Monday Machine Madness — Save LKR 300/hr on bowling machines every Monday!</span>
+            <a href="special-offers.html" class="text-brand-accent hover:underline inline-flex items-center gap-1 font-bold">
+                View Offer <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ================= STICKY HEADER & NAVBAR ================= -->
+    <header class="sticky top-0 z-40 w-full glass-panel border-b border-white/10 transition-all duration-300" id="top">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+            <!-- Brand Logo & Name -->
+            <a href="index.html" class="flex items-center gap-3.5 group">
+                <div class="relative w-12 h-12 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-brand-green to-brand-accent glow-ring-green transition-transform duration-300 group-hover:scale-105">
+                    <img src="images/logo.jpeg" alt="Bouncer Indoor Sports Logo"
+                        class="w-full h-full object-cover rounded-full bg-brand-dark">
+                </div>
+                <div>
+                    <span class="block font-display text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-brand-accent transition-colors">
+                        BOUNCER
+                    </span>
+                    <span class="block text-[11px] font-bold tracking-widest text-emerald-400 uppercase">
+                        Indoor Sports
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-6 xl:gap-7">
+                <a href="index.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Home</a>
+                <a href="about.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">About Us</a>
+                <a href="facilities.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Facilities & Rates</a>
+                <a href="special-offers.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Special Offers</a>
+                <a href="youth-team.html" class="desktop-nav-link text-sm font-bold text-brand-accent transition-colors duration-200">Youth Team</a>
+                <a href="gallery.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Gallery</a>
+                <a href="contact.html" class="desktop-nav-link text-sm font-semibold text-slate-300 hover:text-brand-accent transition-colors duration-200">Contact Us</a>
+            </nav>
+
+            <!-- Header Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+94769992391"
+                    class="motion-hover-btn inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/5 hover:bg-white/10 text-white border border-white/15 transition-all">
+                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                    <span>076 999 2391</span>
+                </a>
+                <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20book%20a%20slot."
+                    target="_blank" rel="noopener noreferrer"
+                    class="motion-hover-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-black uppercase tracking-wider bg-brand-accent hover:bg-brand-accentHover text-brand-dark shadow-glow-accent transition-all">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Book Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-toggle" type="button" aria-label="Open mobile navigation menu"
+                class="lg:hidden w-11 h-11 rounded-lg glass-card flex items-center justify-center text-slate-200 hover:text-white hover:border-brand-accent/50 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+    <div id="mobile-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden transition-opacity"></div>
+    <div id="mobile-drawer"
+        class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-brand-surface border-l border-white/10 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+        <div>
+            <div class="flex items-center justify-between pb-6 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full border border-brand-accent/40">
+                    <span class="font-display font-extrabold text-white text-base">BOUNCER SPORTS</span>
+                </div>
+                <button id="mobile-menu-close" type="button" aria-label="Close navigation"
+                    class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-1 py-6">
+                <a href="index.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Home</a>
+                <a href="about.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">About Us</a>
+                <a href="facilities.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Facilities & Rates</a>
+                <a href="special-offers.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Special Offers</a>
+                <a href="youth-team.html" class="mobile-nav-link px-4 py-3 rounded-lg text-brand-accent bg-white/5 font-bold text-base transition-colors">Youth Team</a>
+                <a href="gallery.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Gallery</a>
+                <a href="contact.html" class="mobile-nav-link px-4 py-3 rounded-lg text-slate-300 hover:text-brand-accent hover:bg-white/5 font-semibold text-base transition-colors">Contact Us</a>
+            </nav>
+        </div>
+
+        <div class="pt-6 border-t border-white/10 flex flex-col gap-3">
+            <a href="tel:+94769992391"
+                class="w-full py-3 px-4 rounded-xl text-center text-sm font-bold bg-white/10 hover:bg-white/15 text-white flex items-center justify-center gap-2">
+                <i class="fa-solid fa-phone text-emerald-400"></i> Call 076 999 2391
+            </a>
+            <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20book%20a%20slot."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full py-3 px-4 rounded-xl text-center text-sm font-black bg-brand-accent text-brand-dark flex items-center justify-center gap-2 shadow-glow-accent">
+                <i class="fa-brands fa-whatsapp text-base"></i> Book Now
+            </a>
+            <p class="text-[11px] text-center text-slate-500 pt-2">
+                125/A, Old Kesbewa Rd, Delkanda, Nugegoda
+            </p>
+        </div>
+    </div>
+
+
+    <main>
+
+        <!-- ================= PAGE BANNER ================= -->
+        <section class="py-16 lg:py-24 relative overflow-hidden bg-brand-surface/70 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+                <span class="inline-block text-xs font-black tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20 mb-4"
+                    data-aos="fade-down">
+                    COMMUNITY & TRAINING
+                </span>
+
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight mb-4"
+                    data-aos="fade-up">
+                    Bouncer Youth Team
+                </h1>
+
+                <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed mb-6"
+                    data-aos="fade-up" data-aos-delay="100">
+                    Take your cricket journey to the next level with Bouncer Youth Team. Join fellow passionate cricketers, refine your skills, and train in a dedicated environment.
+                </p>
+
+                <!-- Breadcrumbs -->
+                <nav class="flex items-center justify-center gap-2 text-xs font-semibold text-slate-400" data-aos="fade-up" data-aos-delay="150">
+                    <a href="index.html" class="hover:text-brand-accent transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-brand-accent">Youth Team</span>
+                </nav>
+
+            </div>
+        </section>
+
+
+        <!-- ================= YOUTH TEAM MAIN SHOWCASE ================= -->
+        <section class="py-20 lg:py-28 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16 border border-emerald-500/30 relative overflow-hidden mb-16"
+                    data-aos="fade-up">
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+                        <div class="lg:col-span-7">
+                            <span class="text-xs font-black uppercase tracking-widest text-brand-accent mb-2 block">
+                                SQUAD INFORMATION
+                            </span>
+
+                            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white tracking-tight mb-4">
+                                Join the Bouncer Youth Squad
+                            </h2>
+
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                                Take your cricket journey to the next level with Bouncer Youth Team. Join fellow cricket enthusiasts, improve your skills under structured indoor net training, develop your confidence, and become part of a passionate cricket community.
+                            </p>
+
+                            <!-- Highlight Age Box -->
+                            <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 mb-8 max-w-md">
+                                <div class="w-12 h-12 rounded-xl bg-brand-green/30 flex items-center justify-center text-2xl flex-shrink-0">
+                                    🏏
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-white text-sm">Open to Ages 17 and Above</h3>
+                                    <p class="text-xs text-slate-400">Anyone aged 17 or above is welcome to contact Bouncer about joining.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20am%20interested%20in%20joining%20the%20Bouncer%20Youth%20Team."
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="motion-hover-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-display font-black text-xs uppercase tracking-wider bg-brand-accent hover:bg-brand-accentHover text-brand-dark shadow-glow-accent transition-all">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                    <span>Join the Youth Team</span>
+                                </a>
+
+                                <a href="tel:+94769992391"
+                                    class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-white/10 hover:bg-white/15 border border-white/10 transition-all">
+                                    <i class="fa-solid fa-phone text-emerald-400"></i>
+                                    <span>Call 076 999 2391</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Info Card with Clean Image -->
+                        <div class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                            <img src="images/indoor-net.jpg" alt="Bouncer Youth Team Training Facility" loading="lazy"
+                                class="w-full h-80 object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/40 to-transparent p-6 flex flex-col justify-end">
+                                <p class="text-xs text-emerald-300 font-bold uppercase tracking-wider mb-1">
+                                    Official Training Center
+                                </p>
+                                <p class="text-sm font-bold text-white">
+                                    129/A, Old Kesbewa Road, Nugegoda, Sri Lanka
+                                </p>
+                                <p class="text-[11px] text-slate-400 mt-1">
+                                    Contact us today to inquire about practice sessions and upcoming squad activities.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3 Highlights -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-center hover:border-emerald-500/40 transition-all" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-green/20 text-emerald-400 text-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-white text-lg mb-2">Team Camaraderie</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Train alongside fellow cricket enthusiasts who share the same passion for learning, improving, and enjoying competitive cricket.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-center hover:border-brand-accent/40 transition-all" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-accent/20 text-brand-accent text-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-white text-lg mb-2">Structured Net Practice</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Benefit from consistent indoor batting and bowling sessions on quality synthetic turf with bowling machine availability.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-center hover:border-emerald-500/40 transition-all" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/20 text-purple-300 text-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-white text-lg mb-2">Match Experience</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Put your practice into play through indoor full-court softball cricket matches, trial games, and friendly clashes.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-darker border-t border-white/10 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+
+                <!-- Col 1: Brand & Description -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.jpeg" alt="Bouncer Indoor Sports logo" loading="lazy"
+                            class="w-10 h-10 rounded-full border border-brand-accent/40">
+                        <div>
+                            <span class="font-display font-black text-white text-base">Bouncer Indoor Sports</span>
+                            <span class="block text-[11px] text-slate-400">(Pvt.) Ltd.</span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Delkanda's premier indoor cricket practice and training facility. Offering indoor nets, automated bowling machines, full softball court, and youth cricket community.
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=100063951169204" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>Follow Us on Facebook</span>
+                    </a>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="index.html" class="hover:text-brand-accent transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-accent transition-colors">About Us</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Facilities & Rates</a></li>
+                        <li><a href="special-offers.html" class="hover:text-brand-accent transition-colors">Special Offers</a></li>
+                        <li><a href="youth-team.html" class="text-brand-accent font-semibold transition-colors">Bouncer Youth Team</a></li>
+                        <li><a href="gallery.html" class="hover:text-brand-accent transition-colors">Cricket Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-accent transition-colors">Contact & Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Facilities Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Our Facilities
+                    </h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Indoor Practice Nets (LKR 1,400/hr)</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Hardball Bowling Machine</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Softball Bowling Machine</a></li>
+                        <li><a href="facilities.html" class="hover:text-brand-accent transition-colors">Indoor Full Court Softball Cricket</a></li>
+                        <li><a href="special-offers.html" class="hover:text-brand-accent transition-colors">Monday Machine Madness (LKR 1,500/hr)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">
+                        Contact Info
+                    </h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-brand-accent mt-0.5"></i>
+                            <span>129/A, Old Kesbewa Road, Nugegoda, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-emerald-400"></i>
+                            <a href="tel:+94769992391" class="hover:text-white transition-colors">076 999 2391</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <a href="https://wa.me/94769992391" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">076 999 2391</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-brand-accent"></i>
+                            <span>Open 7 Days: 8:00 AM – 11:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>
+                    &copy; <span id="year">2026</span> Bouncer Indoor Sports (Pvt.) Ltd. All rights reserved.
+                </p>
+                <a href="#top" class="hover:text-brand-accent transition-colors flex items-center gap-1.5">
+                    <span>Back to Top</span>
+                    <i class="fa-solid fa-arrow-up text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= FLOATING QUICK ACTION BUTTONS ================= -->
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/94769992391?text=Hello%20Bouncer%20Indoor%20Sports%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20slot."
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Book on WhatsApp"
+        class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-glow-green animate-float-wp transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" type="button" aria-label="Back to top"
+        class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full glass-card border border-white/20 text-slate-300 hover:text-brand-accent hover:border-brand-accent/60 flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 shadow-xl">
+        <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.umd.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

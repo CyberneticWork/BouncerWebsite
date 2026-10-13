@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
             function updateCounter(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                // Ease-out cubic
                 const easeOut = 1 - Math.pow(1 - progress, 3);
                 const currentNum = Math.floor(startVal + (targetVal - startVal) * easeOut);
 
@@ -329,26 +328,80 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === "ArrowRight") nextGalleryItem();
     });
 
+    /* =====================================================
+       5.1 GALLERY MEDIA FILTER TABS (PHOTOS & REELS)
+    ===================================================== */
+    const galleryFilterButtons = document.querySelectorAll(".gallery-filter-btn");
+    const galleryMediaItems = document.querySelectorAll(".gallery-media-item");
+
+    galleryFilterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const filter = btn.getAttribute("data-gallery-filter");
+
+            // Update tab styles
+            galleryFilterButtons.forEach((b) => {
+                b.classList.remove("bg-brand-green", "text-white", "shadow-glow-green");
+                b.classList.add("bg-brand-surface", "text-slate-300", "border", "border-slate-800");
+            });
+            btn.classList.remove("bg-brand-surface", "text-slate-300", "border", "border-slate-800");
+            btn.classList.add("bg-brand-green", "text-white", "shadow-glow-green");
+
+            // Filter cards
+            galleryMediaItems.forEach((item) => {
+                const mediaType = item.getAttribute("data-media-type");
+                const shouldShow = filter === "all" || mediaType === filter;
+
+                if (shouldShow) {
+                    item.style.display = "block";
+                    if (Motion && typeof Motion.animate === "function") {
+                        Motion.animate(item, { opacity: [0, 1], transform: ["scale(0.96)", "scale(1)"] }, { duration: 0.25 });
+                    }
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            if (typeof AOS !== "undefined") {
+                AOS.refresh();
+            }
+        });
+    });
+
 
     /* =====================================================
-       6. ACTIVE SECTION SCROLL-SPY
+       6. MULTI-PAGE ACTIVE NAVIGATION & SCROLL-SPY
     ===================================================== */
-    const sections = document.querySelectorAll("main section[id]");
-    const navLinks = document.querySelectorAll(".desktop-nav-link");
+    const navLinks = document.querySelectorAll(".desktop-nav-link, .mobile-nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
-    if ("IntersectionObserver" in window) {
+    // A. Highlight link matching current HTML page
+    navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (
+            href === currentPath ||
+            (href === "index.html" && (currentPath === "" || currentPath === "index.html"))
+        ) {
+            link.classList.add("text-brand-accent", "font-bold");
+            link.classList.remove("text-slate-300");
+        } else if (!href.startsWith("#")) {
+            link.classList.remove("text-brand-accent", "font-bold");
+            link.classList.add("text-slate-300");
+        }
+    });
+
+    // B. Same-page hash scroll-spy on index.html
+    const sections = document.querySelectorAll("main section[id]");
+    if (sections.length > 0 && "IntersectionObserver" in window && (currentPath === "index.html" || currentPath === "")) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const id = entry.target.getAttribute("id");
                         navLinks.forEach((link) => {
-                            if (link.getAttribute("href") === `#${id}`) {
+                            const href = link.getAttribute("href");
+                            if (href === `#${id}` || href === `index.html#${id}`) {
                                 link.classList.add("text-brand-accent", "font-bold");
                                 link.classList.remove("text-slate-300");
-                            } else {
-                                link.classList.remove("text-brand-accent", "font-bold");
-                                link.classList.add("text-slate-300");
                             }
                         });
                     }
@@ -362,7 +415,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       7. BACK TO TOP BUTTON
+       7. CONTACT & BOOKING FORM TO WHATSAPP
+    ===================================================== */
+    const bookingForm = document.getElementById("booking-form");
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById("form-name");
+            const phoneInput = document.getElementById("form-phone");
+            const facilityInput = document.getElementById("form-facility");
+            const dateInput = document.getElementById("form-date");
+            const timeInput = document.getElementById("form-time");
+            const messageInput = document.getElementById("form-message");
+            const alertBox = document.getElementById("form-alert");
+
+            const name = nameInput ? nameInput.value.trim() : "";
+            const phone = phoneInput ? phoneInput.value.trim() : "";
+            const facility = facilityInput ? facilityInput.value : "";
+            const date = dateInput ? dateInput.value : "";
+            const time = timeInput ? timeInput.value : "";
+            const message = messageInput ? messageInput.value.trim() : "";
+
+            if (!name || !phone) {
+                if (alertBox) {
+                    alertBox.textContent = "Please fill in your name and contact phone number.";
+                    alertBox.className = "p-3 rounded-xl text-xs font-semibold bg-red-500/20 text-red-300 border border-red-500/30 block mb-4";
+                }
+                return;
+            }
+
+            // Construct formatted WhatsApp message
+            let waText = `Hello Bouncer Indoor Sports, I would like to inquire/book a session:\n`;
+            waText += `• Name: ${name}\n`;
+            waText += `• Phone: ${phone}\n`;
+            if (facility) waText += `• Facility: ${facility}\n`;
+            if (date) waText += `• Preferred Date: ${date}\n`;
+            if (time) waText += `• Preferred Time: ${time}\n`;
+            if (message) waText += `• Message: ${message}\n`;
+
+            const waUrl = `https://wa.me/94769992391?text=${encodeURIComponent(waText)}`;
+
+            if (alertBox) {
+                alertBox.textContent = "Opening WhatsApp to send your booking inquiry...";
+                alertBox.className = "p-3 rounded-xl text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 block mb-4";
+            }
+
+            // Open WhatsApp in new tab
+            window.open(waUrl, "_blank", "noopener,noreferrer");
+        });
+    }
+
+
+    /* =====================================================
+       8. BACK TO TOP BUTTON
     ===================================================== */
     const backToTopBtn = document.getElementById("back-to-top");
     if (backToTopBtn) {
@@ -383,7 +489,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       8. AUTOMATIC FOOTER YEAR
+       9. AUTOMATIC FOOTER YEAR
     ===================================================== */
     const yearEl = document.getElementById("year");
     if (yearEl) {
@@ -392,7 +498,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       9. CONVERSION TRACKING & LOGGING
+       10. CONVERSION TRACKING & LOGGING
     ===================================================== */
     const bookingLinks = document.querySelectorAll('a[href*="wa.me/"], a[href^="tel:"]');
     bookingLinks.forEach((link) => {
@@ -404,7 +510,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       10. IMAGE FALLBACK HANDLER
+       11. IMAGE FALLBACK HANDLER
     ===================================================== */
     const allImages = document.querySelectorAll("img");
     allImages.forEach((img) => {
