@@ -1,0 +1,202 @@
+/* =========================================================
+   BOUNCER INDOOR SPORTS (PVT.) LTD.
+   TAILWIND CSS v3 ENHANCEMENTS & ANIMATION STYLESHEET
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --brand-dark: #0b0f0c;
+    --brand-surface: #121814;
+    --brand-card: #162019;
+    --brand-green: #087438;
+    --brand-green-glow: rgba(8, 116, 56, 0.4);
+    --brand-accent: #facc15;
+    --brand-accent-glow: rgba(250, 204, 21, 0.35);
+}
+
+/* Custom Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    background-color: #080b09;
+    color: #e2e8f0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    background-color: #080b09;
+}
+
+/* Display Font for Athletic Punchy Titles */
+.font-display {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0f0c;
+}
+::-webkit-scrollbar-thumb {
+    background: #1c2e22;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #087438;
+}
+
+/* Sports Pitch Grid Background */
+.bg-sports-grid {
+    background-color: #080b09;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(8, 116, 56, 0.22) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+}
+
+.bg-radial-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(8, 116, 56, 0.18) 0%, rgba(11, 15, 12, 0) 70%);
+}
+
+.bg-radial-accent {
+    background: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.15) 0%, rgba(11, 15, 12, 0) 70%);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+    background: rgba(18, 25, 20, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card {
+    background: rgba(21, 30, 24, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(8, 116, 56, 0.45);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(8, 116, 56, 0.25);
+}
+
+/* Text Shimmer Effect */
+.text-shimmer {
+    background: linear-gradient(90deg, #ffffff 0%, #facc15 50%, #ffffff 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Glow Rings */
+.glow-ring-green {
+    box-shadow: 0 0 0 1px rgba(8, 116, 56, 0.35), 0 0 20px -2px rgba(8, 116, 56, 0.3);
+}
+
+.glow-ring-accent {
+    box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.4), 0 0 25px -2px rgba(250, 204, 21, 0.25);
+}
+
+/* Reading Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #087438, #10b981, #facc15);
+    z-index: 9999;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Active Nav Item */
+.nav-link.active {
+    color: #facc15;
+}
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Gallery Hover Vignette */
+.gallery-card {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.gallery-card img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Lightbox Modal Animation */
+#gallery-modal {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#gallery-modal.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+#gallery-modal.active #modal-image-container {
+    transform: scale(1);
+}
+#modal-image-container {
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Soft Bounce Keyframes */
+@keyframes softBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+.animate-soft-bounce {
+    animation: softBounce 3s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px -3px rgba(8, 116, 56, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px 2px rgba(8, 116, 56, 0.7);
+    }
+}
+.animate-pulse-glow {
+    animation: pulseGlow 2.5s infinite;
+}
+
+/* WhatsApp Floating Button Shake */
+@keyframes floatWp {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.03); }
+}
+.animate-float-wp {
+    animation: floatWp 3.5s ease-in-out infinite;
+}
+
+/* Ensure AOS animations play nicely */
+[data-aos] {
+    pointer-events: auto !important;
+}
